@@ -1,16 +1,5 @@
-SELECT *
-FROM Covid..Deaths
-WHERE continent is not NULL
-ORDER BY 3,4
-
-
-SELECT location, date, total_cases, new_cases, total_deaths, population
-FROM Covid..Deaths
-WHERE continent is not NULL
-ORDER BY 1,2
-
 -- Looking at Total cases Vs Total deaths
--- Showing likehood of dying if you contract covid in your country
+-- Showing likehood of dying if you contract covid in Canada
 
 SELECT location, date, total_cases, total_deaths,(total_deaths/total_cases)*100 as DeathPercentage
 FROM Covid..Deaths
